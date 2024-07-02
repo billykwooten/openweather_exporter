@@ -16,10 +16,11 @@ package collector
 import (
 	"encoding/json"
 	"fmt"
-	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
 	"net/url"
+
+	log "github.com/sirupsen/logrus"
 
 	"github.com/prometheus/client_golang/prometheus"
 )
@@ -53,7 +54,7 @@ func CurrentByCoordinates(loc Location, client *http.Client, settings *Settings)
 	q.Set("lon", fmt.Sprint(loc.Longitude))
 	q.Set("units", units)
 	q.Set("lang", settings.Language)
-	q.Set("excludes", "minutely,hourly,daily,alerts")
+	q.Set("exclude", "minutely,hourly,daily,alerts")
 
 	u, _ := url.Parse(endpoint)
 	u.RawQuery = q.Encode()
