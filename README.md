@@ -80,7 +80,7 @@ scrape_configs:
 
 Openweather exporter metrics that are collected by default.
 
-| Name        	                   | Description                                                                  |
+| Name        	                  | Description                                                                  |
 |---------------------------------|------------------------------------------------------------------------------|
 | `openweather_temperature`       | `Current temperature in degrees`                                             |
 | `openweather_humidity`          | `Current relative humidity`                                                  |
@@ -94,11 +94,12 @@ Openweather exporter metrics that are collected by default.
 | `openweather_sunrise`           | `Sunrise time, unix, UTC`                                                    |
 | `openweather_sunset`            | `Sunset time, unix, UTC`                                                     |
 | `openweather_currentconditions` | `Current weather conditions (sunny, cloudy, rainy, etc.)`                    |
-| `openweather_ultraviolet_index` | `Ultraviolet Index` |
+| `openweather_ultraviolet_index` | `Ultraviolet Index`                                                          |
+| `openweather_visibility`        | `Visibility in meters`                                                       |
 
 If you enable pollution metrics, the following metrics will be enabled.
 
-| Name        	                            | Description                                                                     |
+| Name        	                           | Description                                                                     |
 |------------------------------------------|---------------------------------------------------------------------------------|
 | `openweather_pollution_airqualityindex`  | `Air Quality Index. 1 = Good, 2 = Fair, 3 = Moderate, 4 = Poor, 5 = Very Poor.` |
 | `openweather_pollution_carbonmonoxide`   | `Concentration of CO (Carbon Monoxide) μg/m3`                                   |
