@@ -87,6 +87,7 @@ Openweather exporter metrics that are collected by default.
 | `openweather_feelslike`         | `Current feels_like temperature in degrees (heat index)`                     |
 | `openweather_pressure`          | `Current Atmospheric pressure hPa`                                           |
 | `openweather_windspeed`         | `Current Wind Speed in mph or meters/sec if imperial`                        |
+| `openweather_windgust`          | `Current Wind Gust in mph or meters/sec if imperial`                         |
 | `openweather_rain1h`            | `Rain volume for last hour, in millimeters`                                  |
 | `openweather_snow1h`            | `Snow volume for last hour, in millimeters`                                  |
 | `openweather_winddegree`        | `Wind direction, degrees (meteorological)`                                   |
