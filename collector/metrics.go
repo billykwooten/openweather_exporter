@@ -95,16 +95,18 @@ func OneCallGauges(location string) []Metric {
 		&Gauge[*OneCallCurrentData]{
 			prometheus.NewDesc("openweather_currentconditions",
 				"Current weather conditions",
-				[]string{"location", "currentconditions"}, nil,
+				[]string{"location", "currentconditions", "icon"}, nil,
 			),
 			func(*OneCallCurrentData) float64 { return 0 },
 			func(d *OneCallCurrentData) []string {
 				// Get Weather description out of Weather slice to pass as label
 				var weatherDescription string
+				var icon string
 				for _, n := range d.Weather {
 					weatherDescription = n.Description
+					icon = n.Icon
 				}
-				return []string{location, weatherDescription}
+				return []string{location, weatherDescription, icon}
 			},
 		},
 	}
